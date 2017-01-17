@@ -1,0 +1,19 @@
+<script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"
+>
+</script>
+
+<input type="text">
+<input type="button" value="submit">
+
+<script>
+    (function() {
+        $('[type="button"]').on('click', function() {
+            $.post('/submit', function(response) {
+                console.log(response);
+            })
+        });
+    })();
+</script>
